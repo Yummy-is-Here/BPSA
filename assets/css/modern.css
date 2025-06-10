@@ -1,0 +1,16 @@
+/* Modern overrides */
+body {
+    line-height: 1.6;
+    color: #212529;
+}
+.navbar-nav > li > a {
+    text-transform: none;
+    font-weight: 500;
+}
+.welcome-hero {
+    font-family: var(--font-family-base);
+}
+.footer {
+    background: #f8f9fa;
+    color: #555;
+}

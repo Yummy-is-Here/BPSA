@@ -8,6 +8,12 @@
 font-family: 'Roboto', sans-serif;
 ==================================== */
 
+:root {
+    --primary-color: #ff545a;
+    --accent-color: #0052cc;
+    --font-family-base: 'Inter', 'Poppins', sans-serif;
+}
+
 
 /*=========== TABLE OF CONTENTS ===========
 1.  General css (Reset code)
@@ -40,9 +46,9 @@ font-family: 'Roboto', sans-serif;
 	box-sizing:border-box;
 }
 body{
-	font-family: 'Poppins', sans-serif;
-	font-size:14px;
-	color:#a09e9c;
+        font-family: var(--font-family-base);
+        font-size:14px;
+        color:#a09e9c;
     text-transform:none;
     max-width:1920px;
     margin:0 auto;
@@ -222,7 +228,7 @@ nav.navbar.bootsnav {
     display: inline-block;
     color: #1b1e20;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     padding: 34px 0px;
     text-transform:capitalize;
 }
@@ -288,9 +294,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 --------------------------------------*/
 .welcome-hero {
     position: relative;
-    background:url(../images/welcome-hero/banner.jpg)no-repeat;
-    background-position:center;
-    background-size:cover;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url(../images/welcome-hero/banner.jpg) center/cover no-repeat;
     text-align: center;
     height:800px;
     z-index: 1;
@@ -302,7 +306,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     left: 0;
     width: 100%;
     height: 100%;
-    background:rgba(65,73,89,.65);
+    background:rgba(0,0,0,0.4);
     z-index: -1;
 }
 .welcome-hero-txt { padding-top: 155px;}
@@ -310,8 +314,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .welcome-hero-txt h2 {
     font-size: 48px;
     color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 600;
+    text-transform: none;
     letter-spacing: 2.4px;
     line-height: 1.4;
 }
@@ -319,8 +323,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .welcome-hero-txt a {
     font-size: 48px;
     color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 600;
+    text-transform: none;
     letter-spacing: 2.4px;
     line-height: 1.4;
     
@@ -329,8 +333,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .welcome-hero-txt a:hover {
     font-size: 48px;
     color: #ff545a;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 600;
+    text-transform: none;
     letter-spacing: 2.4px;
     line-height: 1.4;
     transition: 0.3s linear;
@@ -387,17 +391,17 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     color:  #fff;
     width:  170px;
     height:  70px;
-    background:  #ff545a;
-    text-transform:  capitalize;
-    margin-left:  30px;
-    border-radius: 3px;
+    background: var(--accent-color);
+    text-transform: capitalize;
+    margin-left: 30px;
+    border-radius: 30px;
     -webkit-transition: 0.3s linear; 
     -moz-transition: 0.3s linear; 
     -ms-transition: 0.3s linear; 
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
-.welcome-hero-btn:hover{/*background: #fd4043;*/background: #f43032;}
+.welcome-hero-btn:hover{background: #003d99;}
 
 .welcome-hero-btn svg {
     width:  14px;
