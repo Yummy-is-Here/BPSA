@@ -1,0 +1,104 @@
+<?php
+$jobs = json_decode(file_get_contents(__DIR__ . '/positions.json'), true) ?? [];
+?>
+<!doctype html>
+<html class="no-js" lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Volné pozice</title>
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/logo_bpsa_navbar.jpg"/>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/13302ebbf0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/linearicons.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootsnav.css" >
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/modern.css">
+</head>
+<body>
+<section class="top-area">
+    <div class="header-area">
+        <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">BPSA</a>
+                </div>
+                <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li><a href="index.html#onas">O nás</a></li>
+                        <li><a href="sluzby.html">Služby</a></li>
+                        <li><a href="plneni.html">Náhradní plnění</a></li>
+                        <li><a href="index.html#klienti">Naši klienti</a></li>
+                        <li><a href="pozice.php">Volné pozice</a></li>
+                        <li><a href="kontakty.html">Kontakty</a></li>
+                        <li><a href="formular.html">Kontaktní Formulář</a></li>
+                        <li><a href="tel:+420734300442">+420 734 300 442</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="clearfix"></div>
+</section>
+<section id="works" class="works">
+    <div class="container">
+        <div class="section-header">
+            <h2>Volné pozice</h2>
+        </div>
+        <div class="works-content">
+            <div class="row">
+                <?php foreach ($jobs as $job): ?>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-how-works">
+                        <div class="single-how-works-icon">
+                            <i class="fa-solid <?php echo htmlspecialchars($job['icon']); ?> fa-2x"></i>
+                        </div>
+                        <h2><a href="pozice_detail.php?id=<?php echo $job['id']; ?>"><?php echo htmlspecialchars($job['title']); ?></a></h2><br>
+                        <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='formular.html'">Mám zájem</button>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="hm-footer-copyright">
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>&copy;copyright 2024 BPSA s.r.o.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="scroll-Top">
+        <div class="return-to-top">
+            <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top"></i>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootsnav.js"></script>
+<script src="assets/js/feather.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>
