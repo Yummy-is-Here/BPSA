@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Ostraha",
+    "icon": "fa-building-shield",
+    "description": "Zajištění ochrany objektů a majetku."
+  },
+  {
+    "id": 2,
+    "title": "Recepce",
+    "icon": "fa-user",
+    "description": "Komunikace s návštěvníky a obsluha recepce."
+  },
+  {
+    "id": 3,
+    "title": "Úklid",
+    "icon": "fa-broom",
+    "description": "Pravidelné i jednorázové úklidové práce."
+  },
+  {
+    "id": 4,
+    "title": "Administrativa",
+    "icon": "fa-file",
+    "description": "Zpracování administrativní agendy a podpora kanceláře."
+  },
+  {
+    "id": 5,
+    "title": "Management",
+    "icon": "fa-user-tie",
+    "description": "Řízení týmů a projektů společnosti."
+  },
+  {
+    "id": 6,
+    "title": "Ostatní",
+    "icon": "fa-question",
+    "description": "Další pracovní pozice dle aktuální nabídky."
+  }
+]
